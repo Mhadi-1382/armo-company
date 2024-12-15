@@ -1,0 +1,20 @@
+{
+	"dir": "ltr",
+	"lang": "en",
+	"name": "Armo",
+	"short_name": "Armo",
+	"display": "fullscreen",
+	"display_override": [
+		"standalone",
+		"minimal-ui"
+	],
+	"start_url": "/",
+	"background_color": "#FFFFFF",
+	"theme_color": "#FFFFFF",
+	"description": "Armo, for your dreams to come true",
+	"orientation": "portrait",
+	"prefer_related_applications": false,
+	"icons": [
+
+	]
+}

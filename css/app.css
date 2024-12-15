@@ -1,0 +1,334 @@
+
+/* ===== Variables ===== */
+:root {
+	--font: "DanaVF", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	--font-size: 1rem;
+	--padding: 1rem;
+	--b-radius-16: 1rem;
+	--b-radius-25: 1.5625rem;
+	--b-radius-full: 9999px;
+	--trs-2s: all 0.2s ease;
+}
+
+/* ===== Import font ===== */
+@font-face {
+	font-family: "DanaVF";
+	src: url(../fonts/DanaVF.ttf);
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	scroll-behavior: smooth;
+	-moz-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	vertical-align: baseline;
+	padding: 0;
+	margin: 0;
+	border: 0;
+  }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, img {
+	display: block;
+}
+figure {
+	margin-right: auto;
+	margin-left: auto;
+}
+ul,
+li {
+	list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+}
+hr {
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+iframe {
+	border-radius: var(--b-radius-25);
+	border: none;
+	height: 100%;
+	width: 100%;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	color: #0b0b0b;
+	transition: var(--trs-2s);
+}
+::selection {
+	background-color: #000;
+	color: #fff;
+}
+*::-webkit-scrollbar {
+	height: 7px;
+	width: 7px;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #ccc;
+}
+
+/* ===== Body ===== */
+body {
+	font-family: var(--font);
+	background-color: #fff;
+	line-height: 1.5;
+	font-size: var(--font-size);
+	color: #000;
+	padding: 0;
+	margin: 0;
+}
+
+/* ===== Container ===== */
+.container {
+	transition: var(--trs-2s);
+	margin: auto;
+	width: 45%;
+}
+
+/* ===== Header ===== */
+header {
+	/* filter: blur(1px); */
+	overflow: hidden;
+	height: 450px;
+	width: 100%;
+}
+header video,
+header img {
+	width: 100%;
+}
+
+/* ===== Branding ===== */
+.branding {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	display: flex;
+	padding: var(--padding);
+	user-select: none;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+}
+.branding img {
+	transition: var(--trs-2s);
+	background-color: #fff;
+	border-radius: var(--b-radius-full);
+}
+
+/* ===== Section ===== */
+section.section__cards {
+	top: -120px;
+	gap: 0.8rem;
+	display: flex;
+	padding: 1.5rem;
+	overflow: hidden;
+	position: relative;
+	border-radius: var(--b-radius-25);
+	background-color: #fff;
+	flex-direction: column;
+	/* box-shadow: 0 1rem 10rem rgba(0, 0, 0, 0.060); */
+}
+section.section__cards .section__cards__header {
+	gap: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+section.section__cards .section__cards__header h3 {
+	margin-right: 10px;
+}
+section.section__cards .section__cards__header h3::before {
+	background-color: aquamarine;
+	position: absolute;
+	border-radius: var(--b-radius-full);
+	content: ' ';
+	height: 20px;
+	width: 20px;
+	right: -8px;
+}
+section.section__cards .section__cards__body {
+	gap: 0.8rem;
+	display: flex;
+	margin-top: 15px;
+	align-items: center;
+	flex-direction: column;
+}
+section.section__cards .section__cards__body a {
+	width: 100%;
+}
+
+/* ===== Card, Modal ===== */
+.card {
+	background-color: rgba(246, 246, 246, 0.7);
+	transition: var(--trs-2s);
+	border-radius: var(--b-radius-25);
+	padding: 1.2rem;
+	width: 100%;
+}
+.card p {
+	color: #a0a0a0;
+	font-size: 15px;
+}
+.card:hover {
+	transition: var(--trs-2s);
+	opacity: 0.6;
+}
+
+.modal-display {display: flex !important;}
+.modal-overlay {
+	background-color: rgba(0, 0, 0, 0.600);
+	backdrop-filter: blur(6px);
+	user-select: none;
+	overflow: hidden;
+	position: fixed;
+	z-index: 100;
+	height: 100%;
+	width: 100%;
+	inset: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+.modal-overlay i {
+	position: fixed;
+	z-index: 101;
+	height: 100%;
+	width: 100%;
+	inset: 0;
+}
+.modal-overlay .modal {
+	animation: slide-up ease-in-out 0.3s;
+	transition: var(--trs-2s);
+	background-color: #fff;
+	border-radius: var(--b-radius-25);
+	overflow: hidden;
+	padding: var(--padding);
+	height: 550px;
+	width: 450px;
+	z-index: 200;
+	opacity: 1;
+}
+.modal-overlay .modal .modal-header {
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: flex;
+	position: fixed;
+	margin-top: -10px;
+	align-items: center;
+	justify-content: center;
+}
+.modal-overlay .modal .modal-header .modal-header-line {
+	background-color: #f0f0f0;
+	border-radius: var(--b-radius-full);
+	height: 4px;
+	width: 80px;
+}
+.modal-overlay .modal .modal-body {
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Footer ===== */
+footer {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1.5rem var(--padding);
+	margin-top: 50px;
+}
+footer .footer-copyright {
+	gap: 0.5rem;
+	display: flex;
+	color: #0b0b0b;
+	font-size: 14px;
+	flex-wrap: wrap;
+	align-items: center;
+	transition: var(--trs-2s);
+	justify-content: space-between;
+}
+
+
+/* ===== Animations ===== */
+@keyframes slide-up {
+	0% {
+		transform: translate3d(0, 100%, 0);
+		opacity: 0;
+	}
+}
+
+/* ===== Media query / Breakpoint ===== */
+@media (max-width: 950px) {
+	*::-webkit-scrollbar {display: none;}
+
+	.container {
+		transition: var(--trs-2s);
+		width: 95%;
+	}
+
+	.branding img {
+		transition: var(--trs-2s);
+		width: 80px;
+	}
+
+	section.section__cards {
+		top: -280px;
+	}
+
+	.modal-overlay .modal {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		transition: var(--trs-2s);
+		position: absolute;
+		height: 85%;
+		width: 100%;
+		bottom: 0;
+	}
+	
+	footer .footer-copyright {
+		transition: var(--trs-2s);
+		flex-direction: column;
+		text-align: center;
+	}
+}
+@media (max-height: 580px) {
+	.modal-overlay .modal {
+		transition: var(--trs-2s);
+		height: 85%;
+	}
+}
