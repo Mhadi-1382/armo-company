@@ -117,6 +117,7 @@ header {
 }
 header video,
 header img {
+	transition: var(--trs-2s);
 	width: 100%;
 }
 
@@ -150,6 +151,7 @@ section.section__cards {
 	border-radius: var(--b-radius-25);
 	background-color: #fff;
 	flex-direction: column;
+	transition: var(--trs-2s);
 	/* box-shadow: 0 1rem 10rem rgba(0, 0, 0, 0.060); */
 }
 section.section__cards .section__cards__header {
@@ -301,13 +303,20 @@ footer .footer-copyright {
 		width: 95%;
 	}
 
+	header video,
+	header img {
+		transition: var(--trs-2s);
+		scale: 1.8;
+	}
+
 	.branding img {
 		transition: var(--trs-2s);
 		width: 80px;
 	}
-
+	
 	section.section__cards {
-		top: -280px;
+		transition: var(--trs-2s);
+		top: -165px;
 	}
 
 	.modal-overlay .modal {
@@ -324,6 +333,12 @@ footer .footer-copyright {
 		transition: var(--trs-2s);
 		flex-direction: column;
 		text-align: center;
+	}
+}
+@media (max-width: 420px) {
+	section.section__cards {
+		transition: var(--trs-2s);
+		top: -220px;
 	}
 }
 @media (max-height: 580px) {
