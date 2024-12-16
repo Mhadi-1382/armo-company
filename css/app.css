@@ -186,9 +186,7 @@ section.section__cards .section__cards__body a {
 
 /* ===== Card, Modal ===== */
 .card {
-	/* background-color: rgba(246, 246, 246, 0.7); */
-	background-color: #0b0b0b;
-	color: #fff !important;
+	background-color: rgba(246, 246, 246, 0.7);
 	transition: var(--trs-2s);
 	border-radius: var(--b-radius-25);
 	padding: 1.2rem;
