@@ -165,7 +165,7 @@ section.section__cards .section__cards__header h3 {
 	margin-right: 10px;
 }
 section.section__cards .section__cards__header h3::before {
-	background-color: aquamarine;
+	background-color: #7fffd4;
 	position: absolute;
 	border-radius: var(--b-radius-full);
 	content: ' ';
@@ -186,7 +186,9 @@ section.section__cards .section__cards__body a {
 
 /* ===== Card, Modal ===== */
 .card {
-	background-color: rgba(246, 246, 246, 0.7);
+	/* background-color: rgba(246, 246, 246, 0.7); */
+	background-color: #0b0b0b;
+	color: #fff !important;
 	transition: var(--trs-2s);
 	border-radius: var(--b-radius-25);
 	padding: 1.2rem;
@@ -331,8 +333,8 @@ footer .footer-copyright {
 	
 	footer .footer-copyright {
 		transition: var(--trs-2s);
+		align-items: flex-start;
 		flex-direction: column;
-		text-align: center;
 	}
 }
 @media (max-width: 420px) {
