@@ -6,7 +6,8 @@
 <br>
 
 <img src="https://github.com/Mhadi-1382/armo-company/blob/main/imgs/favicon/Logo.jpeg" alt="armo-company" width="80">
-Armo, for your dreams to come true.
+
+> **Armo**, *for your dreams to come true.*
 
 <br>
 
